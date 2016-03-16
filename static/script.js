@@ -8,7 +8,7 @@
     // To Do -> A la espera de métodos para conocer el tamaño de la ventana: var left   = screenX + wz.tool.environmentWidth() / 2 - width / 2 - 25;
     // To Do -> A la espera de métodos para conocer el tamaño de la ventana: var top    = screenY + wz.tool.environmentHeight() / 2 - height / 2 + wzWindow.outerHeight - wzWindow.innerHeight - 50;
 
-    var windowObject = wz.popup( 'https://wikipedia.com/', width, height, left, top ).render();
+    var windowObject = wz.popup( 'https://wikipedia.org/', width, height, left, top ).render();
 
     var timer = setInterval( function(){
 
