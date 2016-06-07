@@ -1,11 +1,25 @@
 
   var win    = $( this );
-  var width  = api.tool.desktopWidth();
-  var height = api.tool.desktopHeight() - 70;
+  var width;
+  var height;
+  var minWidth  = 1000;
+  var minHeight = 629;
+  var maxWidth = api.tool.desktopWidth();
+  var maxHeigth = api.tool.desktopHeight() - 70;
+
+
+  if (minHeight > maxHeigth || minWidth > maxWidth) {
+    width = maxWidth;
+    height = maxHeigth;
+
+  }else {
+    width = minWidth;
+    height = minHeight;
+  }
   var left   = ( wz.tool.environmentWidth() / 2 ) - ( width / 2 );
   var top    = ( wz.tool.environmentHeight() / 2 ) - ( height / 2 );
   var windowObject = api.popup( 'https://wikipedia.org/', width, height).render();
-  
+
     var timer = setInterval( function(){
 
         if( windowObject.closed ){
